@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   button: {
     paddingVertical: 8,
     paddingHorizontal: 16,
-    borderRadius: 4,
+    borderRadius: 0,
     alignSelf: 'flex-start',
     flexGrow: 0,
     backgroundColor: 'purple',

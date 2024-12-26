@@ -3,7 +3,7 @@ import {action} from '@storybook/addon-actions';
 import {Button} from './Button';
 
 const meta = {
-  title: 'components/MyButton',
+  title: 'components/Button',
   component: Button,
 } satisfies Meta<typeof Button>;
 

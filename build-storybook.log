@@ -1,16 +1,30 @@
 [1m@storybook/core v8.4.7
 [22m
-info => Cleaning outputDir: [36m../../../../../var/folders/zc/_3n28kfd3js487zf8ts8rnsw0000gn/T/chromatic--16072-UhLWlq56bZTN[39m
+info => Cleaning outputDir: [36m../../../../../var/folders/zc/_3n28kfd3js487zf8ts8rnsw0000gn/T/chromatic--58759-oprZ4KvpiAVJ[39m
 info => Loading presets
+WARN Could not resolve addon "@chromatic-com/storybook", skipping. Is it installed?
+WARN Could not resolve addon "@chromatic-com/storybook", skipping. Is it installed?
 info => Building manager..
-info => Manager built ([38;2;181;126;229m65 ms[39m)
+info => Manager built ([38;2;181;126;229m64 ms[39m)
 info => Building preview..
+info Addon-docs: using MDX3
 info => Using implicit CSS loaders
 Using @react-native/babel-preset
 info => Using default Webpack5 setup
+info => Copying static files: [36m.storybook/assets[39m at [36m../../../../../var/folders/zc/_3n28kfd3js487zf8ts8rnsw0000gn/T/chromatic--58759-oprZ4KvpiAVJ/assets[39m
+info Using tsconfig paths for react-docgen
 WARN asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
 WARN This can impact web performance.
 WARN Assets: 
-WARN   413.cec5f03e.iframe.bundle.js (448 KiB)
-info => Preview built ([38;2;181;126;229m4.98 s[39m)
-info => Output directory: /var/folders/zc/_3n28kfd3js487zf8ts8rnsw0000gn/T/chromatic--16072-UhLWlq56bZTN
+WARN   488.93a653b6.iframe.bundle.js (674 KiB)
+WARN   41.c0c8af03.iframe.bundle.js (653 KiB)
+WARN   878.c7b622f4.iframe.bundle.js (972 KiB)
+WARN entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+WARN Entrypoints:
+WARN   main (664 KiB)
+WARN       runtime~main.cb00d195.iframe.bundle.js
+WARN       41.c0c8af03.iframe.bundle.js
+WARN       main.403fd300.iframe.bundle.js
+WARN 
+info => Preview built ([38;2;181;126;229m8.58 s[39m)
+info => Output directory: /var/folders/zc/_3n28kfd3js487zf8ts8rnsw0000gn/T/chromatic--58759-oprZ4KvpiAVJ

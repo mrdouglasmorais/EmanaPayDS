@@ -20,3 +20,11 @@ const customTheme: ThemeVars = {
 addons.setConfig({
   theme: customTheme,
 });
+
+// export const parameters = {
+//   options: {
+//     storySort: {
+//       order: ['Introduction', 'Components', 'Guides'],
+//     },
+//   },
+// }
