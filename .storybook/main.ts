@@ -23,16 +23,14 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript',
   },
 
-  webpackFinal: async (config) => {
-    // Excluir SVGs do tratamento padrão de assets
-    const assetRule = config.module.rules.find((rule) =>
+  webpackFinal: async (config: any) => {
+    const assetRule = config.module.rules.find((rule: any) =>
       rule.test?.test?.('.svg')
     );
     if (assetRule) {
       assetRule.exclude = /\.svg$/;
     }
 
-    // Adicionar loader para processar SVGs como componentes React
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],

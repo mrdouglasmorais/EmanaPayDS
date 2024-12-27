@@ -1,0 +1,38 @@
+name: NPM Publish
+
+# Dispara o workflow em Pull Requests para a branch main
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  publish:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
+      # Instalar dependências
+      - name: Install dependencies
+        run: yarn install
+
+      # Testar antes de publicar (opcional)
+      - name: Run tests
+        run: yarn test
+
+      # Publicar no NPM
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn publish --non-interactive --access public
