@@ -1,0 +1,10 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from './Icons';
+declare const meta: Meta<typeof Icon>;
+export default meta;
+type Story = StoryObj<typeof meta>;
+export declare const BackIcon: Story;
+export declare const SettingsIcon: Story;
+export declare const EditIcon: Story;
+export declare const LockIcon: Story;
+export declare const EyeIcon: Story;

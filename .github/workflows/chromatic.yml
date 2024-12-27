@@ -2,10 +2,6 @@ name: Chromatic
 
 # Executa o workflow em eventos push ou pull request para branches principais
 on:
-  push:
-    branches:
-      - main
-      - develop
   pull_request:
     branches:
       - main

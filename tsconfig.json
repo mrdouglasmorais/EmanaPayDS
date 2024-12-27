@@ -1,38 +1,25 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
     "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "outDir": "dist",
+    "declarationDir": "./dist/types",
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "target": "ES2017",
     "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@utils/*": ["src/utils/*"]
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@utils/*": ["utils/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "declarations.d.ts",
-    ".storybook/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "android",
-    "ios",
-    "dist",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.stories.tsx"
-  ]
+  "include": ["components/**/*", "declarations.d.ts", "src/**/*"],
+  "exclude": ["node_modules", "android", "ios", "dist"]
 }
