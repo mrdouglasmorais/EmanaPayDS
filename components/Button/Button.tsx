@@ -1,3 +1,4 @@
+import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Dimensions} from 'react-native';
 
 export type ButtonProps = {
@@ -5,6 +6,7 @@ export type ButtonProps = {
   text: string;
   type: 'primary' | 'secondary' | 'tertiary';
   size?: 'large' | 'medium' | 'small'; 
+  marginVertical?: number; // Distância entre botões
 };
 
 const {width: screenWidth} = Dimensions.get('window'); 
@@ -21,12 +23,12 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontFamily: 'Roboto',
-    fontWeight: 'bold',
+    fontWeight: '500',
     textAlign: 'center',
+    textTransform: 'uppercase',
   },
   buttonContainer: {
     alignItems: 'center',
-    flex: 1,
     justifyContent: 'center',
   },
   primary: {
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Button = ({text, onPress, type, size = 'medium'}: ButtonProps) => {
+export const Button = ({text, onPress, type, size = 'medium', marginVertical = 8}: ButtonProps) => {
   let buttonStyle: object;
   let buttonWidth: number;
 
@@ -75,8 +77,9 @@ export const Button = ({text, onPress, type, size = 'medium'}: ButtonProps) => {
   }
 
   return (
-    <View style={styles.buttonContainer}>
+    <View style={[styles.buttonContainer, {marginVertical}]}>
       <TouchableOpacity
+        testID="button-touchable"
         style={[styles.button, buttonStyle, {width: buttonWidth}]}
         onPress={onPress}
         activeOpacity={0.8}>
