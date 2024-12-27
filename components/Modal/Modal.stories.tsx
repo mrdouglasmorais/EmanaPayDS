@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { View, Button } from 'react-native';
 import { Meta, StoryFn } from '@storybook/react';
 import Modal from './Modal';
@@ -18,7 +18,7 @@ export default {
 } as Meta<typeof Modal>;
 
 const Template: StoryFn<typeof Modal> = (args) => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = React.useState(false);
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>

@@ -2,17 +2,23 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
     "strict": true,
-    // "esModuleInterop": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "jsx": "react",
     "resolveJsonModule": true,
-    "noEmit": true,
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@assets/*": ["assets/*"],
-      "@utils/*": ["utils/*"]
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": [
@@ -24,6 +30,9 @@
     "node_modules",
     "android",
     "ios",
-    "dist"
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx"
   ]
 }

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 import type {Preview} from '@storybook/react';
 
@@ -8,9 +8,9 @@ interface FontsLoadedState {
 
 export const decorators = [
   (Story: React.ComponentType) => {
-    const [fontsLoaded, setFontsLoaded] = useState<FontsLoadedState['fontsLoaded']>(false);
+    const [fontsLoaded, setFontsLoaded] = React.useState<FontsLoadedState['fontsLoaded']>(false);
 
-    useEffect(() => {
+    React.useEffect(() => {
       (async () => {
         try {
           setFontsLoaded(true); 

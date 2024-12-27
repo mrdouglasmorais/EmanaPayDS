@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {StyleSheet, Text, TouchableOpacity, View, Dimensions} from 'react-native';
 
 export type ButtonProps = {
@@ -6,7 +6,7 @@ export type ButtonProps = {
   text: string;
   type: 'primary' | 'secondary' | 'tertiary';
   size?: 'large' | 'medium' | 'small'; 
-  marginVertical?: number; // Distância entre botões
+  marginVertical?: number;
 };
 
 const {width: screenWidth} = Dimensions.get('window'); 
